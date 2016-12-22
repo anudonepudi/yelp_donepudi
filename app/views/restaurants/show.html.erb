@@ -22,7 +22,13 @@
       </dd>
 
       <dt>Cuisine</dt>
-      <dd><%= @restaurant.cuisine_id %></dd>
+      <dd>
+        <% if @restaurant.cuisine.present? %>
+          <a href="/cuisines/<%= @restaurant.cuisine_id %>">
+            <%= @restaurant.cuisine.name %>
+          </a>
+        <% end %>
+      </dd>
 
     </dl>
 
