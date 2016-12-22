@@ -20,7 +20,7 @@
       <tr>
         <td><%= review.comments %></td>
         <td><%= review.rating %></td>
-        <td><%= review.user_id %></td>
+        <td><%= review.user.name %></td>
         <td><%= review.restaurant_id %></td>
         <td>
           <a href="/reviews/<%= review.id %>" class="btn btn-primary">Show</a>
