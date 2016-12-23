@@ -2,6 +2,23 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root :to => "restaurants#index"
+  # Routes for the Tag resource:
+  # CREATE
+  get "/tags/new", :controller => "tags", :action => "new"
+  post "/create_tag", :controller => "tags", :action => "create"
+
+  # READ
+  get "/tags", :controller => "tags", :action => "index"
+  get "/tags/:id", :controller => "tags", :action => "show"
+
+  # UPDATE
+  get "/tags/:id/edit", :controller => "tags", :action => "edit"
+  post "/update_tag/:id", :controller => "tags", :action => "update"
+
+  # DELETE
+  get "/delete_tag/:id", :controller => "tags", :action => "destroy"
+  #------------------------------
+
   # Routes for the Cuisine resource:
   # CREATE
   get "/cuisines/new", :controller => "cuisines", :action => "new"
