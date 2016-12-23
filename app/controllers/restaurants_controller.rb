@@ -32,6 +32,7 @@ class RestaurantsController < ApplicationController
     @restaurant.city = params[:city]
     @restaurant.address = params[:address]
     @restaurant.cuisine_id = params[:cuisine_id]
+    @restaurant.category_id = params[:category_id]
 
     save_status = @restaurant.save
 
@@ -63,6 +64,7 @@ class RestaurantsController < ApplicationController
     @restaurant.city = params[:city]
     @restaurant.address = params[:address]
     @restaurant.cuisine_id = params[:cuisine_id]
+    @restaurant.category_id = params[:category_id]
 
     save_status = @restaurant.save
 

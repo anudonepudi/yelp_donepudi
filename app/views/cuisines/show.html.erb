@@ -96,6 +96,15 @@
       <!-- Label and input for cuisine_id -->
       <input type="hidden" name="cuisine_id" value="<%= @cuisine.id %>">
 
+      <!-- Label and input for category_id -->
+      <div class="form-group">
+        <label for="category_id" class="control-label">
+          Category
+        </label>
+
+        <textarea id="category_id" name="category_id" placeholder="Category" class="form-control" rows="3"></textarea>
+      </div>
+
       <button class="btn btn-block btn-success">
         Create Restaurant
       </button>

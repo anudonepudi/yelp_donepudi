@@ -63,6 +63,15 @@
         <%= select_tag(:cuisine_id, options_from_collection_for_select(Cuisine.all, :id, :name, @restaurant.cuisine_id), :class => "form-control") %>
       </div>
 
+      <!-- Label and input for category_id -->
+      <div class="form-group">
+        <label for="category_id" class="control-label">
+          Category
+        </label>
+
+        <textarea id="category_id" name="category_id" placeholder="Category" class="form-control" rows="3"><%= @restaurant.category_id %></textarea>
+      </div>
+
       <button class="btn btn-success">
         Create Restaurant
       </button>
